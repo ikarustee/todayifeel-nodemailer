@@ -28,12 +28,6 @@ err
 
 app.post("/send", function (req, res) {
     console.log(req.body)
-    // let mailOptions = {
-    //     from: "test@gmail.com",
-    //     to: process.env.EMAIL,
-    //     subject: "Nodemailer API",
-    //     text: "Hi from your nodemailer API",
-    //   };
     let mailOptions = {
       from: `${req.body.mailerState.email}`,
       to: process.env.EMAIL,
